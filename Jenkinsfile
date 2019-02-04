@@ -1,15 +1,11 @@
 pipeline {
     agent any
     stages {
-        stage('Clone') {
-            steps {
-                sh 'echo "Cloning"'
-            }
-        }
         stage('Build') {
             steps {
-                sh 'echo "Building"'
+                sh 'echo "aws s3 cp test.txt s3://cyberitus-builds/test.txt"'
             }
         }
+        
     }
 }
