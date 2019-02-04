@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Build') {
             steps {
-                sh 'aws s3 cp test.txt s3://cyberitus-builds/test.txt'
+                sh 'python3 build.py'
             }
         }
         
